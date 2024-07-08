@@ -7,6 +7,8 @@ extendZodWithOpenApi(z);
 export type Bible = z.infer<typeof BibleSchema>;
 export const BibleSchema = z.object({
   book: z.string(),
+  chapter: z.number(),
+  verse: z.number()
 });
 
 export const GetBibleSchema = z.object({
